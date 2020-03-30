@@ -72,6 +72,7 @@ const fi = (function() {
     compact: function(array) {
       let newArray = array.map(x => x === true)
       return newArray
+      console.log(newArray)
     },
 
     functions: function() {
