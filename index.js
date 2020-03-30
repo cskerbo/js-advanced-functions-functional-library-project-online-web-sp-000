@@ -70,14 +70,13 @@ const fi = (function() {
     },
 
     compact: function(array) {
-      let newArray = array.map(x => {
-      if (x === true) {
-        return x
-        console.log(x)
+      const collection = [];
+      for (let num of array) {
+        if (num) {
+          collection.push(num);
+        }
       }
-    })
-      return newArray
-      console.log(newArray)
+      return collection;
     },
 
     functions: function() {
