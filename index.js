@@ -34,7 +34,7 @@ const fi = (function() {
     },
 
     find: function(collection, predicate) {
-      console.log(collection)
+
       let newArray = (Array.isArray(collection)) ? collection : Object.values(collection)
       const found = newArray.find(x => x === predicate)
 
