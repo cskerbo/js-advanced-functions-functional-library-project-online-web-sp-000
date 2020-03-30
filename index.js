@@ -55,7 +55,7 @@ const fi = (function() {
       if (n) {
         return array.slice(-n)
       }
-    }
+    },
 
     functions: function() {
 
