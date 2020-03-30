@@ -44,7 +44,7 @@ const fi = (function() {
     filter: function(collection, predicate) {
       const result = collection.filter(x => predicate(x))
       return result
-    }
+    },
 
     functions: function() {
 
