@@ -12,8 +12,8 @@ const fi = (function() {
           },
 
     map: function(collection, callback) {
-      let newCollection = (Array.isArray(collection)) ? collection : Object.values(collection)
-      let newCollection = newCollection.map(x => callback(x))
+      let newArray = (Array.isArray(collection)) ? collection : Object.values(collection)
+      let newCollection = newArray.map(x => callback(x))
       return newCollection
     },
 
