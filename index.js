@@ -17,7 +17,7 @@ const fi = (function() {
       return newCollection
     },
 
-    reduce: function(collection, callback, acc=0) {
+    reduce: function(collection, callback, acc) {
       let sum = collection.reduce((acc, callback) => acc + callback)
       return sum
     },
