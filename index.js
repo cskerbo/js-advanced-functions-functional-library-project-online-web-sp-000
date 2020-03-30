@@ -70,7 +70,11 @@ const fi = (function() {
     },
 
     compact: function(array) {
-      let newArray = array.map(x => x === true)
+      let newArray = array.map(x => {
+      if (x === true) {
+        return x
+      }
+    }
       return newArray
       console.log(newArray)
     },
