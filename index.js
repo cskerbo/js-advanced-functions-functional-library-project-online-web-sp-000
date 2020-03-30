@@ -11,8 +11,8 @@ const fi = (function() {
             return collection
           },
 
-    map: function() {
-
+    map: function(collection, callback) {
+      const newCollection = collection.map(x => callback(x))
     },
 
     reduce: function() {
