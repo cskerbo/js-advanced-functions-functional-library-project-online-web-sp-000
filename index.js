@@ -53,7 +53,7 @@ const fi = (function() {
 
     first: function(array, n) {
       if (n) {
-        return array.slice(-n)
+        return array.slice(0, n)
       }
       else {
         return array[0]
