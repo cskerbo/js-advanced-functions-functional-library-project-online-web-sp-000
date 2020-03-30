@@ -34,11 +34,11 @@ const fi = (function() {
     },
 
     find: function(collection, predicate) {
-
-      let newArray = (Array.isArray(collection)) ? collection : Object.values(collection)
-      const found = newArray.find(x => x === predicate)
-
-      console.log(found)
+      for (let i = 0; i < collection.length; i++) {
+              if (predicate(collection[i]) === true) {
+                return collection[i];
+              }
+            }
     },
 
     functions: function() {
