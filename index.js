@@ -48,7 +48,7 @@ const fi = (function() {
 
     size: function(collection) {
       let newArray = (Array.isArray(collection)) ? collection : Object.values(collection)
-      return newArray.size
+      return newArray.length
     },
 
     functions: function() {
