@@ -17,13 +17,20 @@ const fi = (function() {
       return newCollection
     },
 
-    reduce: function(collection, callback, acc) {
-      console.log(collection)
-      console.log(callback)
-      console.log(acc)
-      let sum = collection.reduce((acc, callback) => acc + callback, 0)
+    reduce: function(c = [], callback = () => {}, acc) {
+			let collection = c.slice(0)
 
-      return sum
+			if (!acc) {
+				acc = collection[0]
+				collection = collection.slice(1)
+			}
+
+			let len = collection.length;
+
+			for (let i = 0; i < len; i++) {
+				acc = callback(acc, collection[i], collection)
+			}
+			return acc;
     },
 
     functions: function() {
