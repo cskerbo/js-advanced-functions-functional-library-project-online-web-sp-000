@@ -60,6 +60,15 @@ const fi = (function() {
       }
     },
 
+    last: function(array, n) {
+      if (n) {
+        return array.slice(-n)
+      }
+      else {
+        return array[-1]
+      }
+    },
+
     functions: function() {
 
     },
