@@ -65,7 +65,7 @@ const fi = (function() {
         return array.slice(-n)
       }
       else {
-        return array[-1]
+        return array.slice(-1)
       }
     },
 
