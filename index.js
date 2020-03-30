@@ -33,11 +33,12 @@ const fi = (function() {
 			return acc;
     },
 
+    find: function(collection, predicate) {
+      const found = collection.find(x => x === predicate)
+      return found
+    },
+
     functions: function() {
-      find: function(collection, predicate) {
-        const found = collection.find(x => x === predicate)
-        return found
-      }
 
     },
 
