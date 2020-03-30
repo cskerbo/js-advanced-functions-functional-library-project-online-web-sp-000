@@ -34,7 +34,9 @@ const fi = (function() {
     },
 
     find: function(collection, predicate) {
+      console.log(collection)
       const found = collection.find(x => x === predicate)
+
       return found
     },
 
