@@ -13,6 +13,7 @@ const fi = (function() {
 
     map: function(collection, callback) {
       const newCollection = collection.map(x => callback(x))
+      return newCollection
     },
 
     reduce: function() {
