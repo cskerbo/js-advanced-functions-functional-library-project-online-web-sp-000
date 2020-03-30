@@ -80,7 +80,8 @@ const fi = (function() {
     },
 
     sortBy: function(array, callback) {
-      return array.sort(function(a, b) {
+      let newArray = array
+      return newArray.sort(function(a, b) {
               return callback(a) - callback(b);
             })
     },
