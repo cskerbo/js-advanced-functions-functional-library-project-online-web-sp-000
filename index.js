@@ -74,7 +74,7 @@ const fi = (function() {
       if (x === true) {
         return x
       }
-    }).join(' ')
+    })
       return newArray
       console.log(newArray)
     },
