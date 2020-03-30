@@ -46,6 +46,10 @@ const fi = (function() {
       return result
     },
 
+    size: function(collection) {
+
+    },
+
     functions: function() {
 
     },
