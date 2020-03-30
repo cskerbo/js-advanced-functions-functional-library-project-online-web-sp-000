@@ -99,22 +99,22 @@ const fi = (function() {
       return flatDeep(array, d);
     },
 
-    uniq: function(array, isSorted, cb) {
-      const sortArr = [...array];
-      function uniqueArr(element, index, self) {
-        return self.indexOf(element) === index;
-      }
-      if (!(cb === undefined)) {
-        const cbArr = [];
-        for (let element of sortArr) {
-          if (!(cb(element) === 0)) {
-            cbArr.push(element);
-          }
-        }
-        return cbArr.filter(uniqueArr);
-      }
-      return sortArr.filter(uniqueArr);
-    },
+    uniq: function (array, isSorted = false, callback = (x) => x) {
+     //[1, 2, 3, 6], false, (x => x % 3)
+     let newCol = [];
+     for (let i of array) {
+       let counter = 0;
+       for (let n of newCol) {
+         if (callback(n) === callback(i)) {
+           counter++;
+         }
+       }
+       if (counter < 1) {
+         newCol.push(i)
+       }
+     }
+     return newCol;
+   },
 
     keys: function(obj) {
       return Object.keys(obj);
