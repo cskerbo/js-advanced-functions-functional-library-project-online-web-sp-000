@@ -87,8 +87,51 @@ const fi = (function() {
 
     },
 
-    functions: function() {
+    flatten: function(array, d) {
+      function flatDeep(array, d) {
+        return d > 0 ? array.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), []) : array.slice();
+      };
+      if (d === true) {
+        d = 1;
+      } else {
+        d = Infinity;
+      }
+      return flatDeep(array, d);
+    },
 
+    uniq: function(array, isSorted, cb) {
+      const sortArr = [...array];
+      function uniqueArr(element, index, self) {
+        return self.indexOf(element) === index;
+      }
+      if (!(cb === undefined)) {
+        const cbArr = [];
+        for (let element of sortArr) {
+          if (!(cb(element) === 0)) {
+            cbArr.push(element);
+          }
+        }
+        return cbArr.filter(uniqueArr);
+      }
+      return sortArr.filter(uniqueArr);
+    },
+
+    keys: function(obj) {
+      return Object.keys(obj);
+    },
+
+    values: function(obj) {
+      return Object.values(obj);
+    },
+
+    functions: function(obj) {
+      const funcObj = [];
+      for (const [key, val] of Object.entries(obj)) {
+        if (typeof(val) === "function") {
+          funcObj.push(key);
+        }
+      }
+      return funcObj.sort();
     },
 
 
