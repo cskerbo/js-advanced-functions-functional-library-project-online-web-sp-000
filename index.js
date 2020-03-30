@@ -6,9 +6,9 @@ const fi = (function() {
 
     each: function(collection, callback) {
       const newCollection = (Array.isArray(collection)) ? collection : Object.values(collection)
-              for (let i = 0; i < newCollection.length; i++) 
-              callback(newCollection[i]) 
-            return collection 
+              for (let i = 0; i < newCollection.length; i++)
+              callback(newCollection[i])
+            return collection
           },
     },
 
