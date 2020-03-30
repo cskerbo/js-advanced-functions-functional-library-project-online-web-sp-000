@@ -73,6 +73,7 @@ const fi = (function() {
       let newArray = array.map(x => {
       if (x === true) {
         return x
+        console.log(x)
       }
     })
       return newArray
