@@ -12,8 +12,9 @@ const fi = (function() {
           },
 
     map: function(collection, callback) {
-      const newCollection = collection.map(x => callback(x))
-      return newCollection
+      const newCollection = (Array.isArray(collection)) ? collection : Object.values(collection)
+      let finalCollection.map(x => callback(x))
+      return finalCollection
     },
 
     reduce: function() {
