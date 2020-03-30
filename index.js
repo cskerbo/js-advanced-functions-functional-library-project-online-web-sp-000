@@ -79,6 +79,10 @@ const fi = (function() {
       return collection;
     },
 
+    sortBy: function(array, callback) {
+
+    },
+
     functions: function() {
 
     },
