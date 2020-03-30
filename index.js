@@ -71,7 +71,7 @@ const fi = (function() {
 
     compact: function(array) {
       let newArray = array.map(x => {
-      if (x === true) {
+      if (x == true) {
         return x
       }
     })
